@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const imageRoutes = require("./routes/imageRoutes");
 const textRoutes = require("./routes/textRoutes");
+const ttsRoutes = require("./routes/ttsRoutes");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 // ✅ Use routes
 app.use("/api", imageRoutes);
 app.use("/api", textRoutes);
+app.use("/api", ttsRoutes);
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");
